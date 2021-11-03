@@ -13,12 +13,16 @@ private:
 	string qualifier;
 protected:
 	void set_throw1(int i);
+	void set_throw2(int i);
 	void set_qualifier(string str) { qualifier = str; };
 public:
-	//turn();
+	turn() {};
+	int check_if_number_or_valid_caracter(char c);
 
 	turn(char c, char d);
 	string get_qualifier() { return qualifier; };
+	int get_throw1() { return throw1; }
+	int get_throw2() { return throw2; }
 	
 };
 

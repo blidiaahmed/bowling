@@ -4,14 +4,17 @@ bool main(int argc, char* argv[])
 {
 
 
-    std::cout << "\n ******rrr********\n" << argc << argv[2];
+    std::cout << "\n ******rrr********\n" << argc;
     //defining a turn
     //turn tu = turn(argv[2][0]);
-    string e = "eee";
+    //string e = "eee";
     //tu.set_qualifier(e);
     //final_spare_turn('1', '9', '5');
-    strick_turn('X');
+    printf("ddd");
+    turn tu = turn('X','c');
+    cout<<tu.check_if_number_or_valid_caracter('-');
 
-    cout << "***************end************";
+
+    cout << "\n ***************end************";
     return false;
 }
