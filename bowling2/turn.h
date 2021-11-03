@@ -12,15 +12,22 @@ private:
 	int throw2;
 	string qualifier;
 protected:
+	void set_throw1(int i);
 	void set_qualifier(string str) { qualifier = str; };
 public:
 	//turn();
-	turn(char c);
+
 	turn(char c, char d);
-	string get_qualifier() {return qualifier};
+	string get_qualifier() { return qualifier; };
 	
 };
 
+class strick_turn :turn
+{
+public:
+	strick_turn(char c);
+	
+};
 class final_strick_turn :turn
 {
 private:

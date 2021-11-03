@@ -1,14 +1,23 @@
 #include "turn.h"
-
-turn::turn(char c)
+#include <iostream>
+using namespace std;
+void turn::set_throw1(int i) { throw1 = 10; }
+strick_turn::strick_turn(char c):turn(c,c)
 {
-	throw1 = 10;
+	try {
+		set_throw1(10);
+		if (c != 'X') throw c;
+	}
+	catch (char d) {
+		cout << " the letter " << d << "doesn't represente a strick case";
+		
+	}
 }
 turn::turn(char c, char d)
 {
 	throw1 = c - 30;
 	throw2 = d - 30;
-	//if !((throw1 + throw2) == 10) qualifier = "miss";
+	if (!((throw1 + throw2) == 10)) qualifier = "miss";
 	
 
 }
