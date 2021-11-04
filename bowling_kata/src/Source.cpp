@@ -12,7 +12,7 @@ bool main(int argc, char* argv[])
     //final_spare_turn('1', '9', '5');
     printf("ddd");
     turn tu = turn('X','c');
-    cout<<tu.check_if_number_or_valid_caracter('-');
+    //cout<<tu.check_if_number_or_valid_caracter('u');
 
 
     cout << "\n ***************end************";
