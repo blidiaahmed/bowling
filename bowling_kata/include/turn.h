@@ -4,6 +4,7 @@
 #ifndef TURN 1
 #define TURN 1
 #include <string>
+#include<iostream>
 
 using namespace std;
 class turn
@@ -15,12 +16,15 @@ private:
 public:
 	void set_throw1(int i);
 	void set_throw2(int i);
-	void set_qualifier(string str) { qualifier = str; };
+	void set_qualifier(string str) { //cout << "\nsetting qualifier to " << str<<endl;
+	qualifier = str; };
 	turn() {};
 	int check_if_number_or_valid_caracter(char c);
 
 	turn(char c, char d);
-	string get_qualifier() { return qualifier; };
+	string get_qualifier() {
+		//cout << "qualifier is " << qualifier << endl;
+		return qualifier; };
 	int get_throw1() { return throw1; }
 	int get_throw2() { return throw2; }
 	
@@ -29,7 +33,7 @@ public:
 class spare_turn :public turn
 {
 public:
-	spare_turn(char c);
+	spare_turn(char c, char d);
 };
 
 class strick_turn :public turn

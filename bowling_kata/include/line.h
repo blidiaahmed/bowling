@@ -7,15 +7,18 @@ class line
 {
 	string str;
 	turn tu[10];
+	int scores[10];
 	// to do
 
 public:
 	line();
 	line(string str);
 	string get_str() { return str; }
-	bool divide_by_turn();
 	turn get_turn(int i) { return tu[i]; }
 	void set_turn(turn tur,int  i) { tu[i] = tur; }
+	void set_str(string strr) { str = strr; }
+
+	bool divide_by_turn();
 	bool counte_score();
 };
 

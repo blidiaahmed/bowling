@@ -4,17 +4,22 @@ using namespace std;
 turn::turn(char c, char d)
 {
 	try {
-		if (c == 'X' || d == 'X') throw 1;
-		set_qualifier("invalid turn");
+		if (c == 'X' || d == 'X') {
+			throw 1;
+			
+
+			set_qualifier("invalid turn");
+		}
 	}
 	catch (int i)
 	{
 		cout << "invalid turn: strick comes in one throw only";
 	}
+	cout << "here" << endl;
 	set_throw1(check_if_number_or_valid_caracter(c));
 	set_throw2(check_if_number_or_valid_caracter(d));
 
-	if (!((get_throw1() + get_throw1()) == 10)) qualifier = "miss";
+	if (!((get_throw1() + get_throw1()) != 10)) qualifier = "miss";
 }
 void turn::set_throw1(int i) { throw1 = i; }
 void turn::set_throw2(int i) { throw2 = i; }
@@ -36,17 +41,22 @@ int  turn::check_if_number_or_valid_caracter(char d) {
 	}
 
 }
-spare_turn::spare_turn(char c) :turn()
+spare_turn::spare_turn(char c,char d) :turn()
 {
+	
 	set_throw1(check_if_number_or_valid_caracter(c));
+
 	set_throw2(10-get_throw1());
 	set_qualifier("spare");
+	
+	//cout << "\nqualifier is spare" << endl;
 }
 
 
 strick_turn::strick_turn(char c):turn()
 {
-	try {
+	try 
+	{
 		
 		if (c != 'X') 
 		{
@@ -61,7 +71,7 @@ strick_turn::strick_turn(char c):turn()
 
 	}
 	catch (char d) {
-		cout << "\nthe caracter " << d << " doesn't represente a strick case";
+		cout << "\n the caracter " << d << " doesn't represente a strick case";
 		
 	}
 }
