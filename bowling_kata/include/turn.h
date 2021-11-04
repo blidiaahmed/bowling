@@ -26,18 +26,25 @@ public:
 	
 };
 
+class spare_turn :public turn
+{
+public:
+	spare_turn(char c);
+};
+
 class strick_turn :public turn
 {
 public:
 	strick_turn(char c);
 };
-class final_strick_turn :strick_turn
+class final_strick_turn :public strick_turn
 {
 private:
 	int throw3;
 public:
 	void set_throw3(char c) { throw3 = c; }
 	final_strick_turn(char c1, char c2, char c3);
+	int get_throw3() { return throw3; }
 };
 
 class final_spare_turn :public turn

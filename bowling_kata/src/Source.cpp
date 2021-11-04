@@ -1,6 +1,6 @@
 #include <iostream>
 #include "turn.h"
-bool main(int argc, char* argv[])
+bool main1(int argc, char* argv[])
 {
 
 
