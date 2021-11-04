@@ -5,10 +5,10 @@ using namespace std;
 
 line::line(string str)
 {
-	try { if (!divide_by_turn()) throw "invalid string"; }
-	catch (string s)
+	try { if (true) throw 3; }
+	catch (int i)
 	{
-		cout << "error:" << s;
+		cout << "error:" << i;
 	}
 }
 
@@ -17,7 +17,7 @@ line::line(string str)
 bool divide_by_turn()
 {
 
-	return true;
+	return false;
 }
 bool counte_score() {
 	return true;
