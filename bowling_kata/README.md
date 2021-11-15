@@ -1,20 +1,11 @@
-# Introduction
 
-Write production-grade implementation focusing on simplicity, readability and efficiency. 
-The code should be also fully covered by unit tests.
-
-# Instructions and deliverables
-
-1. Before starting to code, initialize a git repository.
-2. Perform regular commits during your coding session.
-3. When the exercise is done, prepare an archive containing everything (including .git folder) except build output folder.
-4. Send this archive by email.
 
 # How to build
 
 First, extract the Google Test archive in-place (directly in 3rdparty/gtest), so that a googletest-master/ folder is available. You need to have a structure like the following:
 ```
-<project root>/
+bowling/bowling_kata/
+
   3rdparty/
     gtest/
       googletest-master/
